@@ -6,6 +6,6 @@ The repository reproduces all figures of the paper. It is written in Matlab and 
 
 To add all necessary paths, first execute
 
-''' Matlab 
+```matlab
 startup
-'''
+```
