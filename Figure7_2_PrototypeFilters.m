@@ -29,6 +29,7 @@ linSty =  {'-','--','-.',':'};
 for i = 1 : size(prototype,2)
     semilogx(w,prototype(:,i),color = colr(1+mod(i-1,11),:), LineStyle=string(linSty(1+mod(i-1,4))),Marker="o",MarkerIndices=w(idx),MarkerSize=4)
     hold on
+    plot(controlFrequencies(i), 0.5, color = colr(1+mod(i-1,11),:), Marker="x",MarkerSize=7)
 end
 
 xlim([20 fs/2])
@@ -37,6 +38,8 @@ set(gca,'XTick',[30 100 300 1000 3000 10000 ]);
 set(gca,'XTicklabels',{'30','100','300','1k','3k','10k'});
 xlabel('Frequency [Hz]')
 ylabel('Magnitude [dB]')
+
+
 
 %% Print figures
 set(gcf,'Units', 'inches', 'Position', [0 0 3.5 2.6]);
